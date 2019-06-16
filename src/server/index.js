@@ -6,7 +6,7 @@ const port = 3000
 
 // middleware that is specific to this router
 app.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now())
+  console.log(`Time: ${Date.now()}, path: ${req.url}`)
   next()
 })
 

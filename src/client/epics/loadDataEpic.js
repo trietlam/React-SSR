@@ -17,7 +17,6 @@ export const loadDataEpic = action$ =>
           )}`
         )
         .then(res => {
-          console.log({ res })
           return {
             type: loadData.completed,
             payload: res.data

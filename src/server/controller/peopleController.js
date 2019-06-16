@@ -24,7 +24,6 @@ const parseQueryString = filterStr => {
 }
 
 export const getPeopleHandler = (req, res) => {
-  console.log(req.query.filter)
   let filter = parseQueryString(req.query.filter)
   if (!filter) {
     res.status(400).send('Invalid filter format')
