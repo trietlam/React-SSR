@@ -1,20 +1,21 @@
-import React from "react"
-import TableView from "./features/table-view"
-import Filter from "./features/filter"
+import React, { useEffect } from 'react'
+import TableView from './features/table-view'
+import Filter from './features/filter'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+const App = () => {
+  useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles)
+    }
+  }, [])
 
-  render() {
-    return (
-      <div>
-        <Filter />
-        <TableView />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Filter />
+      <TableView />
+    </div>
+  )
 }
 
 export default App
