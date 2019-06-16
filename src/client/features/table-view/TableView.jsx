@@ -31,16 +31,14 @@ const TableView = ({ rows, loadData }) => {
       <TableHead>
         <TableRow>
           <TableCell>Name</TableCell>
-          <TableCell align="center">Gender</TableCell>
-          <TableCell align="center">Age</TableCell>
+          <TableCell align="right">Gender</TableCell>
+          <TableCell align="right">Age</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {rows.map(row => (
           <TableRow key={row._id}>
-            <TableCell component="th" scope="row">
-              {row.name}
-            </TableCell>
+            <TableCell>{row.name}</TableCell>
             <TableCell align="right">{row.gender}</TableCell>
             <TableCell align="right">{row.age}</TableCell>
           </TableRow>

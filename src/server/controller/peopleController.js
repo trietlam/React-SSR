@@ -1,4 +1,4 @@
-import { getPeople } from "../models/peopleModel"
+import { getPeople } from '../models/peopleModel'
 
 const parseQueryString = filterStr => {
   let filter = {}
@@ -6,8 +6,8 @@ const parseQueryString = filterStr => {
   let ageTo = NaN
   try {
     filter = JSON.parse(filterStr)
-    ageFrom = parseInt(filter.ageFrom || 0)
-    ageTo = parseInt(filter.ageTo || 100)
+    ageFrom = parseInt(filter.ageFrom || 0, 10)
+    ageTo = parseInt(filter.ageTo || 100, 10)
   } catch (err) {
     console.error(err)
     return undefined
@@ -27,13 +27,13 @@ export const getPeopleHandler = (req, res) => {
   console.log(req.query.filter)
   let filter = parseQueryString(req.query.filter)
   if (!filter) {
-    res.status(400).send("Invalid filter format")
+    res.status(400).send('Invalid filter format')
     return
   }
 
   getPeople(filter)
     .then(doc => {
-      res.contentType("application/json")
+      res.contentType('application/json')
       res.status(200).send(doc)
     })
     .catch(error => {

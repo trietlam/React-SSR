@@ -1,6 +1,6 @@
-import { connect } from "react-redux"
-import { loadData } from "../../actions"
-import Filter from "./Filter"
+import { connect } from 'react-redux'
+import { loadData } from '../../actions'
+import Filter from './Filter'
 
 const mapDispatchToProps = {
   loadData

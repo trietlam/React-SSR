@@ -1,13 +1,13 @@
 /*
 # Handle initnial server side rendering
 */
-import { renderToString } from "react-dom/server"
-import { ServerStyleSheets, ThemeProvider } from "@material-ui/styles"
-import React from "react"
-import { createStore } from "redux"
-import { Provider } from "react-redux"
-import rootReducer from "~/client/reducers/rootReducer"
-import App from "~/client/App"
+import { renderToString } from 'react-dom/server'
+import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
+import React from 'react'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from '~/client/reducers/rootReducer'
+import App from '~/client/App'
 
 // function handleRender(req, res){
 export const handleRender = (req, res) => {
@@ -51,9 +51,9 @@ const renderFullPage = (html, preloadedState, css) => {
         <script>
           // very basic encode html tag
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
-            /</g,
-            "\\u003c"
-          )}
+    /</g,
+    '\\u003c'
+  )}
         </script>
         <script src="/static/bundle.js"></script>
       </body>

@@ -1,6 +1,6 @@
-import { connect } from "react-redux"
-import { loadData } from "../../actions"
-import TableView from "./TableView"
+import { connect } from 'react-redux'
+import { loadData } from '../../actions'
+import TableView from './TableView'
 
 const mapStateToProps = state => ({
   rows: state.people.data

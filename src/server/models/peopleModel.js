@@ -1,7 +1,7 @@
-import * as Datastore from "nedb"
+import * as Datastore from 'nedb'
 
 const db = new Datastore({
-  filename: "../db.json",
+  filename: '../db.json',
   autoload: true
 })
 

@@ -1,8 +1,8 @@
-import { mergeMap } from "rxjs/operators"
-import { ofType } from "redux-observable"
-import axios from "axios"
-import { types } from "../actions"
-import { config } from "../utils/config"
+import { mergeMap } from 'rxjs/operators'
+import { ofType } from 'redux-observable'
+import axios from 'axios'
+import { types } from '../actions'
+import { config } from '../utils/config'
 
 const { loadData } = types
 

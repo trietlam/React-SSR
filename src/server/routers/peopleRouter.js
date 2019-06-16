@@ -1,8 +1,8 @@
-import express from "express"
-import { getPeopleHandler } from "../controller/peopleController"
+import express from 'express'
+import { getPeopleHandler } from '../controller/peopleController'
 
 const router = express.Router()
 
-router.get("/", getPeopleHandler)
+router.get('/', getPeopleHandler)
 
 export default router

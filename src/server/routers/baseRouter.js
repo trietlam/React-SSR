@@ -1,7 +1,7 @@
-import express from "express"
-import { handleRender } from "../controller/baseController"
+import express from 'express'
+import { handleRender } from '../controller/baseController'
 const router = express.Router()
 
-router.use("/", handleRender)
+router.use('/', handleRender)
 
 export default router

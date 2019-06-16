@@ -1,11 +1,11 @@
-import React from "react"
-import { createStore, applyMiddleware, compose } from "redux"
-import { createEpicMiddleware } from "redux-observable"
-import { hydrate } from "react-dom"
-import { Provider } from "react-redux"
-import App from "./App"
-import rootReducer from "./reducers/rootReducer"
-import rootEpic from "./epics"
+import React from 'react'
+import { createStore, applyMiddleware, compose } from 'redux'
+import { createEpicMiddleware } from 'redux-observable'
+import { hydrate } from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './App'
+import rootReducer from './reducers/rootReducer'
+import rootEpic from './epics'
 
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.__PRELOADED_STATE__
@@ -25,5 +25,5 @@ hydrate(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 )

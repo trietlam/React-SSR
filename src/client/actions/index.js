@@ -9,7 +9,7 @@ const actionsBuilder = name => {
 }
 
 export const types = {
-  loadData: actionsBuilder("load_data")
+  loadData: actionsBuilder('load_data')
 }
 
 // filterObs: {
