@@ -13,7 +13,7 @@ export const types = {
 }
 
 // filterObs: {
-//   name: [string],
+//   gender: [string],
 //   ageFrom: [number],
 //   ageTo: [number]
 // }
